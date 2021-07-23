@@ -1,0 +1,15 @@
+﻿@page "/"
+
+@inject IJSRuntime js
+
+<button @onclick="check">check</button>
+
+@code
+{
+    private async Task check()
+    {
+        await js.MyFunction("This is working from custome java script code");
+        
+    }
+
+}   
